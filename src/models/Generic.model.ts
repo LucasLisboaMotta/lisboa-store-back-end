@@ -9,7 +9,6 @@ export default abstract class GenericModel<T> implements IModel<T> {
   }
 
   async create(obj: T): Promise<T> {
-    console.log('2');
     return this._modelMongoose.create(obj);
   }
 

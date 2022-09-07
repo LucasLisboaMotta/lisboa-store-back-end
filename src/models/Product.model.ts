@@ -8,7 +8,6 @@ export default class ProductModel
   extends GenericModel<IProduct> 
   implements IProductModel {
   async create(product: IProductCreate): Promise<IProduct> {
-    console.log(3);
     return this._modelMongoose.create({ ...product, updated: Date.now() });
   }
 

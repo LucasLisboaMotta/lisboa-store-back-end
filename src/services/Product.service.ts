@@ -26,9 +26,9 @@ implements IProductService {
   }
 
   create(product: IProductCreate): Promise<IProduct> {
-    console.log('2');
     return this._model.create(product);
   }
+
   getAll(): Promise<IProduct[]> {
     return this._model.getAll();
   }

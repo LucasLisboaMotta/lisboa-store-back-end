@@ -10,9 +10,7 @@ export default class ProductController implements IProductController {
   }
 
   async create(req: Request, res: Response): Promise<Response> {
-    console.log('1');
     const result = await this._service.create(req.body);
-    console.log('5');
     return res.status(201).json(result);
   }
 
