@@ -10,7 +10,9 @@ const postProductValidator = (
 ) => {
   const isValid = ProductCreateZodSchema.safeParse(req.body);
   const isValidValue = validValue.test(req.body.value);
-  if (!isValid || !isValidValue) throw new CustomError(invalid); 
+
+  if (!isValid.success || !isValidValue) throw new CustomError(invalid); 
+
   return next();
 };
 

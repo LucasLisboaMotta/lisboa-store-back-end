@@ -11,7 +11,7 @@ const patchProductValidator = (
   const isValid = ProductPatchZodSchema.safeParse(req.body);
   const hasKeys = Object.keys(req.body).length > 0;
   
-  if (!isValid || !hasKeys) throw new CustomError(invalid);
+  if (!isValid.success || !hasKeys) throw new CustomError(invalid);
   
   const haveValue = req.body.value !== undefined;
   const isValidValue = validValue.test(req.body.value);
