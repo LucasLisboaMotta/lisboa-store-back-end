@@ -1,3 +1,3 @@
-const validValue = /^\d+(\d{3})*(\.\d{2})$/gm;
+const validValue = /^\d+\.\d{2}$/;
 
 export default validValue;
