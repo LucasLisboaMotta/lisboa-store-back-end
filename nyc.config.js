@@ -1,9 +1,7 @@
 module.exports = {
   extends: '@istanbuljs/nyc-config-typescript',
   include: [
-    'src/models',
-    'src/services',
-    'src/controllers',
+    'src',
   ],
   reporter: [
     'text',
