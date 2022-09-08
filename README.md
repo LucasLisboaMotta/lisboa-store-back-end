@@ -62,6 +62,15 @@ patch products/:id retorna um objeto contendo o produto atualizado
 
 delete products/:id deleta um produto e retorna apenas o status de produto deletado
 ```
+Ao cadastrar um produto, ele precisa do seguinte objeto:
+```
+{
+  product, \\ string de no minimo 3 caracteres
+  value, \\ string do valor dividindo os centavos com  ponto "37.45" ou "4.00"
+  description, \\ string de no minimo 3 caracteres
+}
+```
+
 Neste projeto foram feitos testes unitários e de integração da rota post products/, você pode ver os testes utilizando o comando
 ```
 npm test
